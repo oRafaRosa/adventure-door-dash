@@ -18,32 +18,32 @@ export type AdventureSet = {
 
 export const adventureSet: AdventureSet = {
   brandName: "Porta do Encontro",
-  title: "Escolha Nossa Aventura",
+  title: "Escolha nossa próxima aventura",
   prompt: "Qual porta vamos escolher juntos?",
   doors: [
     {
       id: 1,
       label: "Porta 1",
       theme: "red",
-      title: "Rota Pico do Jaraguá",
-      icons: ["🌄", "🥾", "🏋️", "🍜"],
-      activities: ["Acordar cedo", "Trilha do Pico do Jaraguá", "Treinar numa academia diferente", "Comer algo diferente"],
+      title: "Pico + Fondue",
+      icons: ["🌄", "🥾", "🍷", "🍜"],
+      activities: ["Trilha ao amanhecer", "Foto no mirante", "Fondue surpresa", "Pôr do sol juntos"],
     },
     {
       id: 2,
       label: "Porta 2",
       theme: "blue",
-      title: "Rota Escalada",
-      icons: ["☀️", "🧗", "💪", "🍣"],
-      activities: ["Acordar cedo", "Escalada", "Treinar numa academia diferente", "Comer algo diferente"],
+      title: "Escalada + Barco",
+      icons: ["🧗", "☀️", "🍣", "🎶"],
+      activities: ["Escalada divertida", "Passeio de barco", "Jantar especial", "Noite neon"],
     },
     {
       id: 3,
       label: "Porta 3",
       theme: "green",
-      title: "Rota Neon no Parque",
-      icons: ["🌤️", "🏃", "🥐", "🪩"],
-      activities: ["Acordar cedo", "Correr em um parque diferente", "Comer algo diferente", "Pula-pula neon"],
+      title: "Parque + Trampolim",
+      icons: ["🌿", "🏃", "🥐", "🪩"],
+      activities: ["Café da manhã caprichado", "Passeio no parque", "Brunch gostoso", "Escape neon"],
     },
   ],
 };

@@ -20,10 +20,16 @@ export const MysteryDoor = ({ door, disabled, isOpening, onChoose }: MysteryDoor
       disabled={disabled}
       onClick={() => onChoose(door)}
       data-open={isOpening}
-      className="door-card group relative flex min-h-[14rem] flex-1 flex-col items-center justify-end rounded-none outline-none transition duration-300 hover:-translate-y-2 focus-visible:ring-4 focus-visible:ring-ring/60 disabled:pointer-events-none"
+      title={door.title}
+      className="door-card group relative flex min-h-[14rem] flex-1 flex-col items-center justify-end rounded-none outline-none transition duration-300 hover:-translate-y-2 hover:shadow-glow focus-visible:ring-4 focus-visible:ring-ring/60 disabled:pointer-events-none"
       aria-label={`Escolher ${door.label}`}
     >
       <span className="coin-badge absolute top-0 z-20">{door.id}</span>
+      <div className="absolute top-12 left-1/2 z-20 flex -translate-x-1/2 gap-1 text-[16px]">
+        {door.icons.slice(0, 2).map((icon, index) => (
+          <span key={index} className="drop-shadow-[0_3px_0_rgba(17,23,39,0.45)]">{icon}</span>
+        ))}
+      </div>
       <div className="path-ribbon absolute bottom-0 h-20 w-[4.8rem] opacity-95" />
       <div className="absolute bottom-12 h-20 w-16 bg-game-sparkle/45 blur-xl transition group-hover:scale-110" />
       <div className="stone-arch relative mb-6 mt-10 h-[8.8rem] w-[6.2rem] animate-wiggle p-2 shadow-pixel">
@@ -37,7 +43,7 @@ export const MysteryDoor = ({ door, disabled, isOpening, onChoose }: MysteryDoor
       </div>
       <div className="pixel-border absolute bottom-0 left-1/2 w-[6.5rem] -translate-x-1/2 rounded-none bg-card/95 px-2 py-3 text-center shadow-soft">
         <p className="font-display text-[9px] leading-relaxed text-game-ink">{door.label}</p>
-        <p className="mt-1 text-[10px] font-extrabold tracking-normal text-muted-foreground">???</p>
+        <p className="mt-1 text-[10px] font-extrabold tracking-normal text-muted-foreground">{door.title}</p>
       </div>
       {isOpening && <span className="reveal-burst pointer-events-none absolute inset-0" />}
     </button>

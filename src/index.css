@@ -141,6 +141,18 @@ All colors MUST be HSL.
     box-shadow: inset -4px -4px 0 hsl(var(--game-ink) / 0.18), inset 4px 4px 0 hsl(var(--game-cream) / 0.35), 0 6px 0 hsl(var(--game-ink) / 0.35);
   }
 
+  .pixel-button {
+    @apply pixel-border rounded-none bg-game-ink/95 text-game-cream shadow-pixel px-5 py-3 font-display text-[10px] uppercase tracking-[0.15em] transition duration-200 ease-out hover:-translate-y-1 active:translate-y-1 focus:outline-none focus:ring-4 focus:ring-ring/60;
+  }
+
+  .door-card:hover .door-panel {
+    filter: brightness(1.12);
+  }
+
+  .game-tag {
+    @apply rounded-none bg-card/90 px-3 py-1 font-display text-[8px] uppercase tracking-[0.3em] text-game-ink shadow-soft;
+  }
+
   .cloud {
     @apply absolute bg-card/90 shadow-soft;
     border-radius: 0;
