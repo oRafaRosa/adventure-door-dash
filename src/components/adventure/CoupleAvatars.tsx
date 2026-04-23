@@ -11,7 +11,7 @@ const sizeClasses = {
 
 export const CoupleAvatars = ({ size = "md", pose = "idle" }: CoupleAvatarsProps) => {
   return (
-    <div className={`pixel-avatar relative h-32 w-40 origin-bottom ${sizeClasses[size]}`} aria-label="Avatares pixelados do casal">
+    <div className={`pixel-avatar relative h-56 w-40 origin-bottom ${sizeClasses[size]}`} aria-label="Avatares pixelados do casal">
       <div className="absolute bottom-0 left-10 h-3 w-24 bg-game-ink/25" />
       <div className="absolute bottom-4 left-7 h-9 w-7 bg-door-blue" />
       <div className="absolute bottom-4 left-16 h-9 w-7 bg-game-ink" />
