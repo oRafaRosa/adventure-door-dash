@@ -5,10 +5,16 @@ type PixelCoupleProps = {
 };
 
 const sizeClasses = {
-  sm: "w-[120px]",
-  md: "w-[172px]",
-  lg: "w-[240px]",
+  sm: "w-[128px]",
+  md: "w-[184px]",
+  lg: "w-[244px]",
 };
+
+const outline = "#1b2336";
+const gabiSkin = "#efc7ab";
+const rafaSkin = "#e3ba97";
+const gabiHair = "#3b251d";
+const rafaHair = "#4a2b1d";
 
 export const PixelCouple = ({ pose = "path", size = "md", className = "" }: PixelCoupleProps) => {
   return (
@@ -19,201 +25,109 @@ export const PixelCouple = ({ pose = "path", size = "md", className = "" }: Pixe
 };
 
 const PathPose = () => (
-  <svg viewBox="0 0 200 200" className="block h-auto w-full" shapeRendering="crispEdges" aria-hidden="true">
-    {/* Shadow */}
-    <ellipse cx="100" cy="185" rx="50" ry="8" fill="rgba(0,0,0,0.15)" />
+  <svg viewBox="0 0 180 156" className="block h-auto w-full" shapeRendering="crispEdges" aria-hidden="true">
+    <ellipse cx="90" cy="148" rx="42" ry="7" fill="rgba(27,35,54,0.16)" />
 
-    {/* ===== GABI - MULHER (ESQUERDA) ===== */}
-    
-    {/* Corpo - blusa azul */}
-    <rect x="48" y="100" width="30" height="30" fill="#6bb6d6" />
-    
-    {/* Pernas */}
-    <rect x="54" y="130" width="8" height="32" fill="#d4a574" />
-    <rect x="68" y="130" width="8" height="32" fill="#d4a574" />
-    
-    {/* Pés - sapatinhos brancos */}
-    <rect x="52" y="162" width="12" height="8" fill="#f5f5f5" />
-    <rect x="66" y="162" width="12" height="8" fill="#f5f5f5" />
-    
-    {/* Braço esquerdo (caído) */}
-    <rect x="38" y="110" width="10" height="28" fill="#d4a574" />
-    {/* Mão esquerda */}
-    <rect x="36" y="138" width="8" height="8" fill="#d4a574" />
-    
-    {/* Braço direito estendido (mão dada) */}
-    <rect x="78" y="108" width="12" height="26" fill="#d4a574" />
-    {/* Mão direita */}
-    <rect x="90" y="110" width="8" height="8" fill="#d4a574" />
-    
-    {/* Pescoço */}
-    <rect x="58" y="88" width="10" height="12" fill="#d4a574" />
-    
-    {/* Cabelo preto comprido */}
-    <rect x="50" y="50" width="26" height="14" fill="#1a1a1a" />
-    <rect x="48" y="64" width="4" height="28" fill="#1a1a1a" />
-    <rect x="74" y="64" width="4" height="28" fill="#1a1a1a" />
-    
-    {/* Cabeça */}
-    <rect x="52" y="60" width="22" height="28" fill="#d4a574" />
-    
-    {/* Rosto */}
-    <rect x="54" y="64" width="18" height="18" fill="#e8c4a8" />
-    
-    {/* Olhos */}
-    <rect x="60" y="70" width="2" height="3" fill="#000" />
-    <rect x="70" y="70" width="2" height="3" fill="#000" />
-    
-    {/* Boca sorriso */}
-    <rect x="63" y="77" width="8" height="2" fill="#ff6b9d" />
-    
-    {/* ===== RAFA - HOMEM (DIREITA) ===== */}
-    
-    {/* Corpo - camiseta preta */}
-    <rect x="122" y="100" width="30" height="30" fill="#1a1a1a" />
-    
-    {/* Pernas - calça escura */}
-    <rect x="124" y="130" width="8" height="32" fill="#4a4a4a" />
-    <rect x="138" y="130" width="8" height="32" fill="#4a4a4a" />
-    
-    {/* Pés - sapatinhos brancos */}
-    <rect x="122" y="162" width="12" height="8" fill="#f5f5f5" />
-    <rect x="136" y="162" width="12" height="8" fill="#f5f5f5" />
-    
-    {/* Braço direito (caído) */}
-    <rect x="152" y="110" width="10" height="28" fill="#d4a574" />
-    {/* Mão direita */}
-    <rect x="162" y="138" width="8" height="8" fill="#d4a574" />
-    
-    {/* Braço esquerdo estendido (mão dada) */}
-    <rect x="110" y="108" width="12" height="26" fill="#d4a574" />
-    {/* Mão esquerda */}
-    <rect x="102" y="110" width="8" height="8" fill="#d4a574" />
-    
-    {/* Pescoço */}
-    <rect x="132" y="88" width="10" height="12" fill="#d4a574" />
-    
-    {/* Cabelo preto curtíssimo */}
-    <rect x="124" y="50" width="26" height="10" fill="#2a2a2a" />
-    <rect x="124" y="60" width="26" height="4" fill="#3d3d3d" />
-    
-    {/* Cabeça */}
-    <rect x="126" y="60" width="22" height="28" fill="#d4a574" />
-    
-    {/* Rosto */}
-    <rect x="128" y="64" width="18" height="18" fill="#e8c4a8" />
-    
-    {/* Óculos */}
-    <rect x="132" y="68" width="5" height="5" fill="#f4d666" />
-    <rect x="143" y="68" width="5" height="5" fill="#f4d666" />
-    <rect x="137" y="70" width="6" height="1" fill="#2a2a2a" />
-    
-    {/* Olhos dentro dos óculos */}
-    <rect x="134" y="70" width="2" height="2" fill="#000" />
-    <rect x="145" y="70" width="2" height="2" fill="#000" />
-    
-    {/* Boca sorriso */}
-    <rect x="135" y="77" width="8" height="2" fill="#ff6b9d" />
-    
-    {/* Coração flutuante entre eles */}
-    <rect x="96" y="72" width="6" height="6" fill="#ff6b9d" />
-    <rect x="92" y="68" width="4" height="4" fill="#ff6b9d" />
-    <rect x="102" y="68" width="4" height="4" fill="#ff6b9d" />
+    <g transform="translate(34 20)">
+      <path d="M12 20h18v10h6v34h-8v14h-6V64h-6V34h-4z" fill={gabiHair} stroke={outline} strokeWidth="2" />
+      <rect x="16" y="18" width="12" height="14" fill={gabiSkin} stroke={outline} strokeWidth="2" />
+      <rect x="14" y="32" width="16" height="4" fill="#f5f0e7" stroke={outline} strokeWidth="2" />
+      <rect x="12" y="36" width="20" height="22" fill="#f5f0e7" stroke={outline} strokeWidth="2" />
+      <rect x="12" y="58" width="20" height="14" fill="#7f8f6f" stroke={outline} strokeWidth="2" />
+      <rect x="16" y="72" width="5" height="22" fill={gabiSkin} stroke={outline} strokeWidth="2" />
+      <rect x="24" y="72" width="5" height="22" fill={gabiSkin} stroke={outline} strokeWidth="2" />
+      <rect x="14" y="94" width="9" height="6" fill="#f8f7f1" stroke={outline} strokeWidth="2" />
+      <rect x="22" y="94" width="9" height="6" fill="#f8f7f1" stroke={outline} strokeWidth="2" />
+      <rect x="8" y="42" width="4" height="22" fill={gabiSkin} stroke={outline} strokeWidth="2" />
+      <rect x="30" y="44" width="5" height="16" fill={gabiSkin} stroke={outline} strokeWidth="2" />
+      <rect x="35" y="48" width="12" height="4" fill={gabiSkin} stroke={outline} strokeWidth="2" />
+      <rect x="8" y="58" width="5" height="6" fill={gabiSkin} stroke={outline} strokeWidth="2" />
+      <path d="M6 52h8v12H6z" fill="#8b6f4d" stroke={outline} strokeWidth="2" />
+      <path d="M5 48h10v5H5z" fill="#8b6f4d" stroke={outline} strokeWidth="2" />
+    </g>
+
+    <g transform="translate(88 16)">
+      <path d="M14 18h18v8h4v8h-2v10h-6V34h-14z" fill={rafaHair} stroke={outline} strokeWidth="2" />
+      <rect x="16" y="18" width="12" height="14" fill={rafaSkin} stroke={outline} strokeWidth="2" />
+      <rect x="15" y="30" width="14" height="3" fill="#c89d7a" />
+      <rect x="14" y="32" width="16" height="4" fill="#1f2430" stroke={outline} strokeWidth="2" />
+      <rect x="12" y="36" width="20" height="24" fill="#1f2430" stroke={outline} strokeWidth="2" />
+      <rect x="12" y="60" width="20" height="14" fill="#2a3140" stroke={outline} strokeWidth="2" />
+      <rect x="16" y="74" width="5" height="22" fill={rafaSkin} stroke={outline} strokeWidth="2" />
+      <rect x="24" y="74" width="5" height="22" fill={rafaSkin} stroke={outline} strokeWidth="2" />
+      <rect x="14" y="96" width="9" height="6" fill="#f8f7f1" stroke={outline} strokeWidth="2" />
+      <rect x="22" y="96" width="9" height="6" fill="#f8f7f1" stroke={outline} strokeWidth="2" />
+      <rect x="8" y="40" width="4" height="22" fill={rafaSkin} stroke={outline} strokeWidth="2" />
+      <rect x="30" y="44" width="5" height="16" fill={rafaSkin} stroke={outline} strokeWidth="2" />
+      <rect x="0" y="40" width="8" height="28" fill="#775639" stroke={outline} strokeWidth="2" />
+      <rect x="32" y="40" width="8" height="28" fill="#775639" stroke={outline} strokeWidth="2" />
+      <rect x="35" y="48" width="12" height="4" fill={rafaSkin} stroke={outline} strokeWidth="2" />
+      <rect x="6" y="48" width="4" height="4" fill="#8d6b49" />
+      <rect x="34" y="48" width="4" height="4" fill="#8d6b49" />
+    </g>
+
+    <rect x="82" y="70" width="16" height="4" rx="1" fill="#eec3a1" stroke={outline} strokeWidth="2" />
   </svg>
 );
 
 const KissPose = () => (
-  <svg viewBox="0 0 200 200" className="block h-auto w-full" shapeRendering="crispEdges" aria-hidden="true">
-    {/* Shadow */}
-    <ellipse cx="100" cy="185" rx="50" ry="8" fill="rgba(0,0,0,0.15)" />
+  <svg viewBox="0 0 192 170" className="block h-auto w-full" shapeRendering="crispEdges" aria-hidden="true">
+    <ellipse cx="96" cy="160" rx="46" ry="7" fill="rgba(27,35,54,0.16)" />
 
-    {/* ===== GABI - MULHER (ESQUERDA, INCLINADA) ===== */}
-    
-    {/* Corpo - blusa azul */}
-    <rect x="40" y="110" width="30" height="32" fill="#6bb6d6" />
-    
-    {/* Pernas */}
-    <rect x="46" y="142" width="8" height="28" fill="#d4a574" />
-    <rect x="60" y="142" width="8" height="28" fill="#d4a574" />
-    
-    {/* Pés */}
-    <rect x="44" y="170" width="12" height="8" fill="#f5f5f5" />
-    <rect x="58" y="170" width="12" height="8" fill="#f5f5f5" />
-    
-    {/* Braços abraçando */}
-    <rect x="30" y="120" width="10" height="32" fill="#d4a574" />
-    <rect x="70" y="115" width="12" height="28" fill="#d4a574" />
-    
-    {/* Pescoço */}
-    <rect x="50" y="98" width="10" height="12" fill="#d4a574" />
-    
-    {/* Cabelo preto comprido */}
-    <rect x="42" y="55" width="26" height="14" fill="#1a1a1a" />
-    <rect x="40" y="69" width="4" height="32" fill="#1a1a1a" />
-    <rect x="66" y="69" width="4" height="32" fill="#1a1a1a" />
-    
-    {/* Cabeça */}
-    <rect x="44" y="65" width="22" height="32" fill="#d4a574" />
-    
-    {/* Rosto */}
-    <rect x="46" y="70" width="18" height="20" fill="#e8c4a8" />
-    
-    {/* Olhos fechados (felicidade) */}
-    <rect x="52" y="76" width="3" height="2" fill="#000" />
-    <rect x="64" y="76" width="3" height="2" fill="#000" />
-    
-    {/* Boca em beijo */}
-    <circle cx="60" cy="84" r="3" fill="#ff6b9d" />
-    
-    {/* ===== RAFA - HOMEM (DIREITA, INCLINADO) ===== */}
-    
-    {/* Corpo - camiseta preta */}
-    <rect x="130" y="110" width="30" height="32" fill="#1a1a1a" />
-    
-    {/* Pernas */}
-    <rect x="136" y="142" width="8" height="28" fill="#4a4a4a" />
-    <rect x="150" y="142" width="8" height="28" fill="#4a4a4a" />
-    
-    {/* Pés */}
-    <rect x="134" y="170" width="12" height="8" fill="#f5f5f5" />
-    <rect x="148" y="170" width="12" height="8" fill="#f5f5f5" />
-    
-    {/* Braços abraçando */}
-    <rect x="160" y="120" width="10" height="32" fill="#d4a574" />
-    <rect x="118" y="115" width="12" height="28" fill="#d4a574" />
-    
-    {/* Pescoço */}
-    <rect x="140" y="98" width="10" height="12" fill="#d4a574" />
-    
-    {/* Cabelo preto curtíssimo */}
-    <rect x="132" y="55" width="26" height="10" fill="#2a2a2a" />
-    <rect x="132" y="65" width="26" height="4" fill="#3d3d3d" />
-    
-    {/* Cabeça */}
-    <rect x="134" y="65" width="22" height="32" fill="#d4a574" />
-    
-    {/* Rosto */}
-    <rect x="136" y="70" width="18" height="20" fill="#e8c4a8" />
-    
-    {/* Óculos */}
-    <rect x="140" y="73" width="5" height="5" fill="#f4d666" />
-    <rect x="151" y="73" width="5" height="5" fill="#f4d666" />
-    <rect x="145" y="75" width="6" height="1" fill="#2a2a2a" />
-    
-    {/* Olhos dentro dos óculos (fechados) */}
-    <rect x="142" y="75" width="2" height="2" fill="#000" />
-    <rect x="153" y="75" width="2" height="2" fill="#000" />
-    
-    {/* Boca em beijo */}
-    <circle cx="145" cy="84" r="3" fill="#ff6b9d" />
-    
-    {/* Corações ao redor */}
-    <rect x="70" y="50" width="6" height="6" fill="#ff6b9d" />
-    <rect x="66" y="46" width="4" height="4" fill="#ff6b9d" />
-    <rect x="76" y="46" width="4" height="4" fill="#ff6b9d" />
-    
-    <rect x="126" y="50" width="6" height="6" fill="#ff6b9d" />
-    <rect x="122" y="46" width="4" height="4" fill="#ff6b9d" />
-    <rect x="132" y="46" width="4" height="4" fill="#ff6b9d" />
+    <g transform="translate(28 18)">
+      <path
+        d="M26 18h18v8h4v8h2v18h-4v18h-8V54h-10V34h-2V26h-2z"
+        fill={gabiHair}
+        stroke={outline}
+        strokeWidth="2"
+      />
+      <rect x="28" y="20" width="14" height="16" fill={gabiSkin} stroke={outline} strokeWidth="2" />
+      <rect x="26" y="36" width="16" height="4" fill="#ffffff" stroke={outline} strokeWidth="2" />
+      <rect x="22" y="40" width="22" height="22" fill="#ffffff" stroke={outline} strokeWidth="2" />
+      <rect x="24" y="62" width="10" height="18" fill="#9ab7ea" stroke={outline} strokeWidth="2" />
+      <rect x="34" y="62" width="10" height="18" fill="#8eace3" stroke={outline} strokeWidth="2" />
+      <rect x="24" y="80" width="5" height="26" fill={gabiSkin} stroke={outline} strokeWidth="2" />
+      <rect x="36" y="80" width="5" height="18" fill={gabiSkin} stroke={outline} strokeWidth="2" />
+      <rect x="22" y="106" width="9" height="6" fill="#f8f7f1" stroke={outline} strokeWidth="2" />
+      <rect x="34" y="98" width="9" height="6" fill="#f8f7f1" stroke={outline} strokeWidth="2" />
+      <path d="M18 50h6v24h-6z" fill={gabiSkin} stroke={outline} strokeWidth="2" />
+      <path d="M42 48h10v18H42z" fill={gabiSkin} stroke={outline} strokeWidth="2" />
+      <path d="M49 50h16v6H49z" fill={gabiSkin} stroke={outline} strokeWidth="2" />
+      <path d="M30 28h4v2h6v2h-8z" fill="#ff8ca5" />
+      <rect x="36" y="16" width="4" height="4" fill="#ffffff" stroke={outline} strokeWidth="2" />
+      <rect x="40" y="20" width="4" height="4" fill="#ffffff" stroke={outline} strokeWidth="2" />
+    </g>
+
+    <g transform="translate(92 16)">
+      <path
+        d="M26 14h18v6h4v8h4v8h-2v16h-6V46h-18V28h-2v-8h2z"
+        fill={rafaHair}
+        stroke={outline}
+        strokeWidth="2"
+      />
+      <rect x="28" y="18" width="16" height="18" fill={rafaSkin} stroke={outline} strokeWidth="2" />
+      <rect x="28" y="30" width="14" height="3" fill="#8f6549" />
+      <rect x="30" y="24" width="6" height="5" fill="#d5ecff" stroke={outline} strokeWidth="2" />
+      <rect x="38" y="24" width="6" height="5" fill="#d5ecff" stroke={outline} strokeWidth="2" />
+      <rect x="36" y="25" width="2" height="1" fill={outline} />
+      <rect x="26" y="36" width="18" height="4" fill="#1a1f2a" stroke={outline} strokeWidth="2" />
+      <rect x="22" y="40" width="24" height="24" fill="#1f2430" stroke={outline} strokeWidth="2" />
+      <rect x="24" y="64" width="10" height="18" fill="#2a3140" stroke={outline} strokeWidth="2" />
+      <rect x="36" y="64" width="10" height="18" fill="#2a3140" stroke={outline} strokeWidth="2" />
+      <rect x="24" y="82" width="5" height="24" fill={rafaSkin} stroke={outline} strokeWidth="2" />
+      <rect x="38" y="82" width="5" height="24" fill={rafaSkin} stroke={outline} strokeWidth="2" />
+      <rect x="22" y="106" width="9" height="6" fill="#f8f7f1" stroke={outline} strokeWidth="2" />
+      <rect x="36" y="106" width="9" height="6" fill="#f8f7f1" stroke={outline} strokeWidth="2" />
+      <path d="M16 48h8v22h-8z" fill={rafaSkin} stroke={outline} strokeWidth="2" />
+      <path d="M12 52h10v6H12z" fill={rafaSkin} stroke={outline} strokeWidth="2" />
+      <path d="M46 46h10v24H46z" fill={rafaSkin} stroke={outline} strokeWidth="2" />
+      <path d="M18 42h8v28h-8z" fill="#7a583c" stroke={outline} strokeWidth="2" />
+      <path d="M48 42h8v28h-8z" fill="#7a583c" stroke={outline} strokeWidth="2" />
+      <path d="M28 38h14v4H28z" fill="#8d6348" />
+    </g>
+
+    <path d="M80 62h10v8H80z" fill={gabiSkin} stroke={outline} strokeWidth="2" />
+    <path d="M88 58h10v8H88z" fill={rafaSkin} stroke={outline} strokeWidth="2" />
+    <path d="M85 10h8v6h6v8h-8v4h-6v-4h-8v-8h8z" fill="#ff5f8e" stroke={outline} strokeWidth="2" />
   </svg>
 );
