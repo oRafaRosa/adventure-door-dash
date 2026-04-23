@@ -27,7 +27,7 @@ export const adventureSet: AdventureSet = {
       theme: "red",
       title: "Rota Pico do Jaraguá",
       icons: ["🌄", "🥾", "🏋️", "🍜"],
-      activities: ["Acordar cedo", "trilha do pico do jaragua", "ir treinar numa academia diferente", "comer algo diferente"],
+      activities: ["Acordar cedo", "Trilha do Pico do Jaraguá", "Treinar numa academia diferente", "Comer algo diferente"],
     },
     {
       id: 2,
@@ -35,7 +35,7 @@ export const adventureSet: AdventureSet = {
       theme: "blue",
       title: "Rota Escalada",
       icons: ["☀️", "🧗", "💪", "🍣"],
-      activities: ["Acordar cedo", "Escalada", "ir treinar numa academia diferente", "comer algo diferente"],
+      activities: ["Acordar cedo", "Escalada", "Treinar numa academia diferente", "Comer algo diferente"],
     },
     {
       id: 3,
@@ -43,7 +43,7 @@ export const adventureSet: AdventureSet = {
       theme: "green",
       title: "Rota Neon no Parque",
       icons: ["🌤️", "🏃", "🥐", "🪩"],
-      activities: ["Acordar cedo", "Correr em algum parque diferente", "Comer algo diferente", "Pula pula neon"],
+      activities: ["Acordar cedo", "Correr em um parque diferente", "Comer algo diferente", "Pula-pula neon"],
     },
   ],
 };

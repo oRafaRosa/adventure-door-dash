@@ -3,6 +3,7 @@ import { IntroScreen } from "@/components/adventure/IntroScreen";
 import { PixelWorld } from "@/components/adventure/PixelWorld";
 import { RevealScreen } from "@/components/adventure/RevealScreen";
 import { SelectionScreen } from "@/components/adventure/SelectionScreen";
+import { SoundEngine } from "@/components/adventure/SoundEngine";
 import { AdventureDoor, adventureSet } from "@/data/adventure";
 
 type Screen = "intro" | "selection" | "reveal";
@@ -50,6 +51,7 @@ const Index = () => {
 
   return (
     <PixelWorld>
+      <SoundEngine musicOn={musicOn} soundOn={soundOn} />
       {screen === "intro" && <IntroScreen adventure={adventure} onStart={startAdventure} />}
       {screen === "selection" && (
         <SelectionScreen
