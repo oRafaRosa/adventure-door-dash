@@ -1,5 +1,4 @@
 import { AdventureSet } from "@/data/adventure";
-import { CoupleAvatars } from "./CoupleAvatars";
 
 type IntroScreenProps = {
   adventure: AdventureSet;
@@ -8,7 +7,7 @@ type IntroScreenProps = {
 
 export const IntroScreen = ({ adventure, onStart }: IntroScreenProps) => {
   return (
-    <div className="flex flex-1 flex-col items-center justify-between pb-6 pt-4 text-center animate-pop">
+    <div className="flex flex-1 flex-col items-center justify-between pb-4 pt-3 text-center animate-pop">
       <div className="w-full">
         <div className="mx-auto inline-flex rounded-none bg-card/85 px-4 py-2 font-display text-[9px] leading-relaxed shadow-soft pixel-border">
           {adventure.brandName}
@@ -25,33 +24,22 @@ export const IntroScreen = ({ adventure, onStart }: IntroScreenProps) => {
         </div>
       </div>
 
-      <div className="relative mt-6 w-full flex-1">
-        <div className="mx-auto mt-2 grid max-w-sm grid-cols-3 items-end gap-3 px-2">
-          {["bg-door-red", "bg-door-blue", "bg-door-green"].map((tone, index) => (
-            <div
-              key={tone}
-              className="relative flex flex-col items-center"
-              style={{ animationDelay: `${index * 0.22}s` }}
-            >
-              <span className="coin-badge mb-2 animate-bob">{index + 1}</span>
-              <div className="stone-arch animate-wiggle">
-                <div className={`door-panel relative h-[5.6rem] w-[4.5rem] ${tone} pixel-border overflow-hidden`}>
-                  <span className="question-block absolute left-1/2 top-4 -translate-x-1/2">?</span>
-                  <span className="absolute right-2 top-10 h-2.5 w-2.5 rounded-full bg-game-sun shadow-glow" />
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className="relative mx-auto mt-2 w-fit">
-          <CoupleAvatars size="md" pose="path" />
+      <div className="relative mt-5 w-full flex-1">
+        <div className="pixel-border relative mx-auto overflow-hidden rounded-none shadow-pixel">
+          <img
+            src="./art/rafa-gabi-selection.png"
+            alt="Rafa e Gabi em um mundo pixelado escolhendo a próxima aventura"
+            className="h-[27rem] w-full object-cover object-center"
+          />
+          <div className="absolute inset-x-0 top-0 h-32 bg-[linear-gradient(180deg,rgba(10,14,27,0.65),transparent)]" />
+          <div className="absolute inset-x-0 bottom-0 h-28 bg-[linear-gradient(180deg,transparent,rgba(10,14,27,0.45))]" />
         </div>
       </div>
 
       <div className="w-full max-w-sm space-y-3">
-        <div className="pixel-border rounded-none bg-card/90 px-4 py-3 shadow-pixel">
-          <p className="font-display text-[10px] leading-relaxed text-game-ink">Ready Player Love</p>
-          <p className="mt-2 text-sm font-bold leading-relaxed text-game-ink/80">{adventure.prompt}</p>
+        <div className="pixel-border rounded-none bg-game-ink/92 px-4 py-3 text-game-cream shadow-pixel">
+          <p className="font-display text-[10px] leading-relaxed text-accent">READY PLAYER LOVE</p>
+          <p className="mt-2 text-sm font-bold leading-relaxed text-game-cream/85">{adventure.prompt}</p>
         </div>
         <button
           type="button"
