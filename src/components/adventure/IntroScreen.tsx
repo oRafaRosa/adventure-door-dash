@@ -44,7 +44,7 @@ export const IntroScreen = ({ adventure, onStart }: IntroScreenProps) => {
           ))}
         </div>
         <div className="relative mx-auto mt-2 w-fit">
-          <CoupleAvatars size="md" />
+          <CoupleAvatars size="md" pose="path" />
         </div>
       </div>
 

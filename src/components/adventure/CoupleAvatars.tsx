@@ -1,50 +1,127 @@
 type CoupleAvatarsProps = {
   size?: "sm" | "md" | "lg";
-  pose?: "idle" | "celebrate";
+  pose?: "path" | "embrace";
 };
 
 const sizeClasses = {
-  sm: "scale-[0.72]",
-  md: "scale-[0.9]",
-  lg: "scale-100",
+  sm: "w-[126px]",
+  md: "w-[168px]",
+  lg: "w-[208px]",
 };
 
-export const CoupleAvatars = ({ size = "md", pose = "idle" }: CoupleAvatarsProps) => {
+const PixelRect = ({
+  x,
+  y,
+  w = 1,
+  h = 1,
+  fill,
+}: {
+  x: number;
+  y: number;
+  w?: number;
+  h?: number;
+  fill: string;
+}) => <rect x={x} y={y} width={w} height={h} fill={fill} />;
+
+const PathPose = () => (
+  <svg viewBox="0 0 64 78" className="block h-auto w-full" shapeRendering="crispEdges" aria-hidden="true">
+    <PixelRect x={14} y={73} w={36} h={3} fill="rgba(29,35,58,0.18)" />
+
+    <PixelRect x={16} y={50} w={7} h={17} fill="#f4efe4" />
+    <PixelRect x={16} y={67} w={3} h={7} fill="#cbb39a" />
+    <PixelRect x={20} y={67} w={3} h={7} fill="#cbb39a" />
+    <PixelRect x={15} y={74} w={4} h={2} fill="#f6f3ea" />
+    <PixelRect x={20} y={74} w={4} h={2} fill="#f6f3ea" />
+    <PixelRect x={17} y={52} w={5} h={11} fill="#8e7865" />
+    <PixelRect x={15} y={49} w={9} h={3} fill="#f4efe4" />
+
+    <PixelRect x={14} y={32} w={10} h={18} fill="#41261f" />
+    <PixelRect x={13} y={29} w={12} h={5} fill="#41261f" />
+    <PixelRect x={14} y={27} w={10} h={3} fill="#e8c6ab" />
+    <PixelRect x={16} y={24} w={7} h={4} fill="#41261f" />
+    <PixelRect x={13} y={33} w={2} h={16} fill="#2d1a15" />
+    <PixelRect x={23} y={33} w={2} h={16} fill="#2d1a15" />
+    <PixelRect x={19} y={30} w={4} h={2} fill="#f6ede0" />
+
+    <PixelRect x={31} y={48} w={8} h={16} fill="#f0eadc" />
+    <PixelRect x={31} y={64} w={3} h={10} fill="#23252f" />
+    <PixelRect x={36} y={64} w={3} h={10} fill="#23252f" />
+    <PixelRect x={30} y={74} w={4} h={2} fill="#f7f5ef" />
+    <PixelRect x={36} y={74} w={4} h={2} fill="#f7f5ef" />
+    <PixelRect x={31} y={50} w={8} h={10} fill="#161923" />
+    <PixelRect x={30} y={47} w={10} h={3} fill="#f0eadc" />
+
+    <PixelRect x={30} y={31} w={10} h={16} fill="#5f3928" />
+    <PixelRect x={29} y={28} w={12} h={4} fill="#5f3928" />
+    <PixelRect x={30} y={26} w={10} h={3} fill="#e5bd9a" />
+    <PixelRect x={31} y={24} w={8} h={2} fill="#3b2219" />
+    <PixelRect x={31} y={32} w={3} h={3} fill="#1b2335" />
+    <PixelRect x={36} y={32} w={3} h={3} fill="#1b2335" />
+    <PixelRect x={34} y={32} w={2} h={1} fill="#d4e9ff" />
+    <PixelRect x={33} y={35} w={4} h={1} fill="#1b2335" />
+
+    <PixelRect x={24} y={51} w={2} h={10} fill="#f1d4ba" />
+    <PixelRect x={26} y={53} w={2} h={6} fill="#f1d4ba" />
+    <PixelRect x={27} y={53} w={2} h={7} fill="#f1d4ba" />
+    <PixelRect x={28} y={51} w={2} h={9} fill="#f1d4ba" />
+
+    <PixelRect x={22} y={57} w={2} h={2} fill="#d65b74" />
+    <PixelRect x={39} y={54} w={4} h={2} fill="#f1d4ba" />
+  </svg>
+);
+
+const EmbracePose = () => (
+  <svg viewBox="0 0 76 78" className="block h-auto w-full" shapeRendering="crispEdges" aria-hidden="true">
+    <PixelRect x={17} y={73} w={42} h={3} fill="rgba(29,35,58,0.18)" />
+
+    <PixelRect x={25} y={17} w={10} h={4} fill="#4a281f" />
+    <PixelRect x={23} y={20} w={14} h={10} fill="#4a281f" />
+    <PixelRect x={25} y={22} w={10} h={9} fill="#efc6ab" />
+    <PixelRect x={26} y={24} w={2} h={2} fill="#1d2335" />
+    <PixelRect x={32} y={24} w={2} h={2} fill="#1d2335" />
+    <PixelRect x={28} y={28} w={4} h={1} fill="#c97d88" />
+    <PixelRect x={24} y={31} w={12} h={3} fill="#ffffff" />
+    <PixelRect x={23} y={34} w={14} h={12} fill="#ffffff" />
+    <PixelRect x={24} y={46} w={7} h={12} fill="#7a6c58" />
+    <PixelRect x={31} y={46} w={6} h={12} fill="#7a6c58" />
+    <PixelRect x={24} y={58} w={3} h={14} fill="#d2b89f" />
+    <PixelRect x={34} y={58} w={3} h={14} fill="#d2b89f" />
+    <PixelRect x={23} y={72} w={5} h={2} fill="#f8f5ef" />
+    <PixelRect x={33} y={72} w={5} h={2} fill="#f8f5ef" />
+
+    <PixelRect x={40} y={15} w={12} h={4} fill="#623b29" />
+    <PixelRect x={39} y={19} w={14} h={12} fill="#623b29" />
+    <PixelRect x={41} y={22} w={10} h={8} fill="#efc6ab" />
+    <PixelRect x={42} y={23} w={3} h={3} fill="#1d2335" />
+    <PixelRect x={47} y={23} w={3} h={3} fill="#1d2335" />
+    <PixelRect x={45} y={23} w={2} h={1} fill="#d4e9ff" />
+    <PixelRect x={44} y={26} w={5} h={1} fill="#1d2335" />
+    <PixelRect x={39} y={31} w={14} h={3} fill="#efe8da" />
+    <PixelRect x={38} y={34} w={16} h={13} fill="#161923" />
+    <PixelRect x={39} y={47} w={7} h={12} fill="#23252f" />
+    <PixelRect x={47} y={47} w={6} h={12} fill="#23252f" />
+    <PixelRect x={40} y={59} w={3} h={13} fill="#e4c2a5" />
+    <PixelRect x={49} y={59} w={3} h={13} fill="#e4c2a5" />
+    <PixelRect x={39} y={72} w={5} h={2} fill="#f7f5ef" />
+    <PixelRect x={48} y={72} w={5} h={2} fill="#f7f5ef" />
+
+    <PixelRect x={33} y={38} w={9} h={7} fill="#efc6ab" />
+    <PixelRect x={29} y={40} w={6} h={6} fill="#efc6ab" />
+    <PixelRect x={37} y={42} w={10} h={6} fill="#efc6ab" />
+
+    <PixelRect x={34} y={11} w={8} h={6} fill="#ff5d86" />
+    <PixelRect x={32} y={13} w={12} h={6} fill="#ff5d86" />
+    <PixelRect x={35} y={18} w={6} h={4} fill="#ff5d86" />
+  </svg>
+);
+
+export const CoupleAvatars = ({ size = "md", pose = "path" }: CoupleAvatarsProps) => {
   return (
     <div
-      className={`pixel-avatar relative h-56 w-40 origin-bottom ${sizeClasses[size]} ${pose === "celebrate" ? "animate-bob" : ""}`}
+      className={`pixel-avatar relative ${sizeClasses[size]} origin-bottom ${pose === "embrace" ? "animate-bob" : ""}`}
       aria-label="Avatares pixelados do casal"
     >
-      <div className="absolute bottom-1 left-7 h-3 w-28 bg-game-ink/25" />
-
-      <div className="absolute bottom-4 left-7 h-10 w-8 bg-[#8e5d3d]" />
-      <div className="absolute bottom-4 left-[3.8rem] h-10 w-8 bg-[#5a3a2d]" />
-      <div className="absolute bottom-14 left-6 h-11 w-11 bg-[#efe3c0]" />
-      <div className="absolute bottom-[6.1rem] left-4 h-9 w-[3.6rem] bg-[#6d4a3c]" />
-      <div className="absolute bottom-[5.3rem] left-8 h-8 w-8 bg-[#f1d7b0]" />
-      <div className="absolute bottom-[6.8rem] left-7 h-3 w-7 bg-[#2f1d1a]" />
-      <div className="absolute bottom-[5.8rem] left-[3.45rem] h-2 w-2 bg-game-ink" />
-      <div className="absolute bottom-[5.6rem] left-[4.2rem] h-4 w-5 bg-[#efe3c0]" />
-
-      <div className="absolute bottom-[5.6rem] left-[5.6rem] h-10 w-8 bg-[#2f313b]" />
-      <div className="absolute bottom-[5.6rem] left-[7.9rem] h-10 w-8 bg-[#2f313b]" />
-      <div className="absolute bottom-[7.9rem] left-[5.4rem] h-11 w-11 bg-[#f3e5c7]" />
-      <div className="absolute bottom-[10.2rem] left-[5.2rem] h-5 w-12 bg-[#3a2419]" />
-      <div className="absolute bottom-[9.1rem] left-[5.5rem] h-3 w-[3rem] bg-game-ink/80" />
-      <div className="absolute bottom-[8.7rem] left-[6.2rem] h-2 w-2 bg-game-ink" />
-      <div className="absolute bottom-[8.7rem] left-[7.6rem] h-2 w-2 bg-game-ink" />
-      <div className="absolute bottom-[8.55rem] left-[6rem] h-3 w-5 border-x-2 border-game-ink" />
-
-      <div className="absolute bottom-16 left-[3.8rem] h-3 w-10 bg-[#f3e5c7]" />
-      <div className="absolute bottom-[8.9rem] left-[5.3rem] h-3 w-10 bg-[#f3e5c7]" />
-
-      {pose === "celebrate" && (
-        <>
-          <div className="absolute left-[4.5rem] top-3 animate-bounce text-2xl text-game-heart">♥</div>
-          <div className="absolute left-3 top-10 animate-sparkle text-game-sparkle">✦</div>
-          <div className="absolute right-1 top-12 animate-sparkle text-game-sparkle [animation-delay:0.4s]">✦</div>
-        </>
-      )}
+      {pose === "embrace" ? <EmbracePose /> : <PathPose />}
     </div>
   );
 };

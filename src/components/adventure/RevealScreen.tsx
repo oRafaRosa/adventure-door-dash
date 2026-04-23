@@ -20,7 +20,7 @@ export const RevealScreen = ({ adventure, selectedDoor, showAll, onShowAll, onRe
           <p className="mt-2 font-display text-[10px] leading-relaxed">{selectedDoor.title}</p>
         </div>
         <div className="grid grid-cols-2 gap-x-3 gap-y-1 px-3 py-3 text-[8px] font-display leading-relaxed">
-          <span>♥♥♥</span>
+          <span>GABI</span>
           <span>🪙x143</span>
           <span>TIME</span>
           <span>1-1</span>
@@ -33,7 +33,7 @@ export const RevealScreen = ({ adventure, selectedDoor, showAll, onShowAll, onRe
       </div>
 
       <div className="-mb-5 mt-3 flex justify-center pointer-events-none">
-        <CoupleAvatars size="md" pose="celebrate" />
+        <CoupleAvatars size="md" pose="embrace" />
       </div>
 
       <section className="pixel-border relative mt-0 overflow-hidden rounded-none bg-card/95 p-4 shadow-pixel">

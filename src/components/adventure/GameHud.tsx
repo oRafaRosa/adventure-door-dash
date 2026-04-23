@@ -11,7 +11,7 @@ export const GameHud = ({ musicOn, soundOn, onToggleMusic, onToggleSound }: Game
       <div className="grid gap-2">
         <div className="pixel-border flex items-center justify-between gap-3 rounded-none bg-card/90 px-3 py-2 shadow-soft">
           <div className="grid gap-1">
-            <span>PLAYER 1</span>
+            <span>GABI</span>
             <span className="text-game-heart">♥ ♥ ♥</span>
           </div>
           <div className="text-right">

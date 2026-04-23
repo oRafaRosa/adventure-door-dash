@@ -35,9 +35,9 @@ export const MysteryDoor = ({ door, disabled, isOpening, onChoose }: MysteryDoor
           <div className="absolute inset-x-0 top-0 h-2 bg-game-cream/30" />
         </div>
       </div>
-      <div className="pixel-border absolute bottom-0 left-1/2 w-[6.5rem] -translate-x-1/2 rounded-none bg-card/95 px-2 py-2 text-center shadow-soft">
-        <p className="font-display text-[8px] leading-relaxed">{door.label}</p>
-        <p className="mt-1 text-[11px] font-extrabold leading-tight text-game-ink/75">{door.title.replace("Rota ", "")}</p>
+      <div className="pixel-border absolute bottom-0 left-1/2 w-[6.5rem] -translate-x-1/2 rounded-none bg-card/95 px-2 py-3 text-center shadow-soft">
+        <p className="font-display text-[9px] leading-relaxed text-game-ink">{door.label}</p>
+        <p className="mt-1 text-[10px] font-extrabold tracking-normal text-muted-foreground">???</p>
       </div>
       {isOpening && <span className="reveal-burst pointer-events-none absolute inset-0" />}
     </button>

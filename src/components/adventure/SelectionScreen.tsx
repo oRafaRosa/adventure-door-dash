@@ -53,7 +53,7 @@ export const SelectionScreen = ({
         ))}
       </div>
       <div className="-mt-6 flex justify-center pointer-events-none">
-        <CoupleAvatars size="md" />
+        <CoupleAvatars size="md" pose="path" />
       </div>
       <div className="pixel-border mb-3 mt-1 rounded-none bg-game-ink/92 p-4 text-game-cream shadow-pixel">
         <p className="font-display text-[10px] leading-relaxed">QUAL CAMINHO VAMOS ESCOLHER JUNTOS?</p>
