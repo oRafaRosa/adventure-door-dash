@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Nunito:wght@500;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,35 +10,48 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 199 86% 86%;
+    --foreground: 222 43% 18%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 47 100% 94%;
+    --card-foreground: 222 43% 18%;
 
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 349 89% 67%;
+    --primary-foreground: 47 100% 96%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 94 58% 57%;
+    --secondary-foreground: 143 38% 17%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 197 82% 93%;
+    --muted-foreground: 222 24% 38%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 43 98% 64%;
+    --accent-foreground: 31 62% 18%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 202 62% 72%;
+    --input: 202 62% 72%;
+    --ring: 349 89% 67%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
+
+    --game-sky: 199 86% 86%;
+    --game-meadow: 112 49% 55%;
+    --game-sun: 43 98% 64%;
+    --game-path: 36 79% 76%;
+    --game-ink: 222 43% 18%;
+    --game-cream: 47 100% 94%;
+    --game-heart: 349 89% 67%;
+    --game-sparkle: 53 100% 76%;
+    --door-red: 357 76% 62%;
+    --door-blue: 207 78% 58%;
+    --door-green: 134 51% 48%;
+    --door-trim: 38 77% 34%;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +115,68 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body antialiased;
+  }
+}
+
+@layer components {
+  .game-shell {
+    background:
+      radial-gradient(circle at 18% 12%, hsl(var(--game-sparkle) / 0.5), transparent 16rem),
+      linear-gradient(180deg, hsl(var(--game-sky)) 0%, hsl(194 92% 90%) 48%, hsl(var(--game-meadow)) 49%, hsl(112 48% 45%) 100%);
+  }
+
+  .pixel-border {
+    border: 3px solid hsl(var(--game-ink) / 0.22);
+    box-shadow: inset 0 -4px 0 hsl(var(--game-ink) / 0.08), 0 6px 0 hsl(var(--game-ink) / 0.14);
+  }
+
+  .cloud {
+    @apply absolute rounded-full bg-card/80 shadow-soft;
+  }
+
+  .path-ribbon {
+    background: linear-gradient(180deg, hsl(var(--game-path)), hsl(35 75% 68%));
+    clip-path: polygon(44% 0, 58% 0, 82% 100%, 12% 100%);
+  }
+
+  .door-card {
+    transform-style: preserve-3d;
+    perspective: 800px;
+  }
+
+  .door-panel {
+    transform-origin: left center;
+    transition: transform 720ms cubic-bezier(.2,.85,.2,1.15), filter 300ms ease;
+  }
+
+  .door-card[data-open='true'] .door-panel {
+    transform: rotateY(-68deg) translateX(-5px);
+    filter: brightness(1.08);
+  }
+
+  .reveal-burst::before,
+  .reveal-burst::after {
+    content: '';
+    position: absolute;
+    inset: 18%;
+    border-radius: 999px;
+    background: radial-gradient(circle, hsl(var(--game-sparkle) / 0.75), transparent 62%);
+    animation: pop 900ms ease-out both;
+  }
+
+  .reveal-burst::after {
+    inset: 4%;
+    animation-delay: 160ms;
+    background: radial-gradient(circle, hsl(var(--game-heart) / 0.32), transparent 66%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }
