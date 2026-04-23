@@ -80,7 +80,7 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        display: ["Fredoka", "ui-rounded", "system-ui", "sans-serif"],
+        display: ["Press Start 2P", "ui-monospace", "monospace"],
         body: ["Nunito", "ui-sans-serif", "system-ui", "sans-serif"],
       },
       boxShadow: {
