@@ -1,4 +1,5 @@
 import { AdventureDoor, AdventureSet } from "@/data/adventure";
+import { RevealScene } from "./RevealScene";
 
 type RevealScreenProps = {
   adventure: AdventureSet;
@@ -38,12 +39,8 @@ export const RevealScreen = ({ adventure, selectedDoor, showAll, onShowAll, onRe
   return (
     <div className="flex flex-1 flex-col gap-4 py-3 animate-pop">
       <section className="pixel-border relative overflow-hidden rounded-none shadow-pixel">
-        <img
-          src="./art/rafa-gabi-reveal.png"
-          alt="Rafa e Gabi em uma paisagem pixelada romântica no pôr do sol"
-          className="absolute inset-0 h-full w-full object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,10,22,0.1)_0%,rgba(7,10,22,0.05)_32%,rgba(7,10,22,0.24)_100%)]" />
+        <RevealScene flagText={mission.badge} />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,10,22,0.08)_0%,rgba(7,10,22,0.04)_34%,rgba(7,10,22,0.16)_100%)]" />
 
         <div className="relative z-10 flex min-h-[45rem] flex-col p-3">
           <div className="pixel-border grid grid-cols-[1.3fr_1fr] overflow-hidden rounded-none bg-game-ink/95 text-game-cream shadow-soft">
@@ -89,9 +86,6 @@ export const RevealScreen = ({ adventure, selectedDoor, showAll, onShowAll, onRe
             </div>
           </div>
           <div className="mt-auto grid gap-3">
-            <div className="ml-auto pixel-border max-w-[8.5rem] rounded-none bg-primary/90 px-3 py-3 text-center text-primary-foreground shadow-soft">
-              <p className="font-display text-[8px] leading-relaxed">{mission.badge}</p>
-            </div>
             <div className="pixel-border rounded-none bg-game-ink/95 p-3 text-left text-game-cream shadow-soft">
               <p className="font-display text-[9px] leading-relaxed text-accent">TRAIL BUDDY SAYS:</p>
               <p className="mt-2 text-sm font-bold">{mission.buddy}</p>

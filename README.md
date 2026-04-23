@@ -1,3 +1,3 @@
-# Welcome to your Lovable project
+# Adventure door dash
 
-TODO: Document your project here
+Projeto web mobile-first em pixel art desenvolvido para a R2 Solutions Group - Tech & Consulting.

@@ -1,4 +1,5 @@
 import { AdventureSet } from "@/data/adventure";
+import { SelectionScene } from "./SelectionScene";
 
 type IntroScreenProps = {
   adventure: AdventureSet;
@@ -25,14 +26,10 @@ export const IntroScreen = ({ adventure, onStart }: IntroScreenProps) => {
       </div>
 
       <div className="relative mt-5 w-full flex-1">
-        <div className="pixel-border relative mx-auto overflow-hidden rounded-none shadow-pixel">
-          <img
-            src="./art/rafa-gabi-selection.png"
-            alt="Rafa e Gabi em um mundo pixelado escolhendo a próxima aventura"
-            className="h-[27rem] w-full object-cover object-center"
-          />
-          <div className="absolute inset-x-0 top-0 h-32 bg-[linear-gradient(180deg,rgba(10,14,27,0.65),transparent)]" />
-          <div className="absolute inset-x-0 bottom-0 h-28 bg-[linear-gradient(180deg,transparent,rgba(10,14,27,0.45))]" />
+        <div className="pixel-border relative mx-auto h-[27rem] overflow-hidden rounded-none shadow-pixel">
+          <SelectionScene />
+          <div className="absolute inset-x-0 top-0 h-32 bg-[linear-gradient(180deg,rgba(10,14,27,0.18),transparent)]" />
+          <div className="absolute inset-x-0 bottom-0 h-28 bg-[linear-gradient(180deg,transparent,rgba(10,14,27,0.16))]" />
         </div>
       </div>
 

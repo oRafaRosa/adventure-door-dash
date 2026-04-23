@@ -1,6 +1,7 @@
 import { AdventureDoor, AdventureSet } from "@/data/adventure";
 import { GameHud } from "./GameHud";
 import { MysteryDoor } from "./MysteryDoor";
+import { SelectionScene } from "./SelectionScene";
 
 type SelectionScreenProps = {
   adventure: AdventureSet;
@@ -34,13 +35,9 @@ export const SelectionScreen = ({
 
       <div className="relative mt-4 flex-1">
         <div className="pixel-border relative h-[31rem] overflow-hidden rounded-none shadow-pixel">
-          <img
-            src="./art/rafa-gabi-selection.png"
-            alt="Rafa e Gabi diante de caminhos misteriosos em um mundo pixelado"
-            className="absolute inset-0 h-full w-full object-cover object-center"
-          />
-          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,12,26,0.16)_0%,rgba(8,12,26,0.04)_32%,rgba(8,12,26,0.18)_100%)]" />
-          <div className="absolute inset-x-3 top-6 grid grid-cols-3 gap-3">
+          <SelectionScene />
+          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,12,26,0.10)_0%,rgba(8,12,26,0.02)_35%,rgba(8,12,26,0.12)_100%)]" />
+          <div className="absolute inset-x-3 top-8 z-20 grid grid-cols-3 gap-3">
             {adventure.doors.map((door) => (
               <MysteryDoor
                 key={door.id}
@@ -51,7 +48,7 @@ export const SelectionScreen = ({
               />
             ))}
           </div>
-          <div className="absolute inset-x-4 bottom-4">
+          <div className="absolute inset-x-4 bottom-4 z-20">
             <div className="pixel-border rounded-none bg-game-ink/92 p-4 text-game-cream shadow-pixel">
               <p className="font-display text-[10px] leading-relaxed">QUAL CAMINHO VAMOS ESCOLHER JUNTOS?</p>
               <p className="mt-2 text-sm font-bold text-game-cream/80">{adventure.prompt}</p>
