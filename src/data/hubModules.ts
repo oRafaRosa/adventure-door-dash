@@ -11,7 +11,7 @@ export const hubModules: HubModule[] = [
   {
     slug: "adventure-door-dash",
     title: "Adventure Door Dash",
-    description: "Uma experiência mobile em pixel art com portas secretas e surpresas para o Rafa e a Gabi.",
+    description: "Uma surpresa interativa que eu criei pra você explorar junto comigo.",
     path: "/adventure",
     status: "active",
     icon: "🚪",
@@ -19,7 +19,7 @@ export const hubModules: HubModule[] = [
   {
     slug: "convites-para-jantar",
     title: "Convites para jantar",
-    description: "Planeje o próximo jantar especial com ideias, data e local para o casal.",
+    description: "Um lugar para deixar registros dos nossos jantares e das ideias gostosas que quero te convidar.",
     path: "/convites",
     status: "coming-soon",
     icon: "🍽️",
@@ -27,7 +27,7 @@ export const hubModules: HubModule[] = [
   {
     slug: "roteiros-surpresa",
     title: "Roteiros surpresa",
-    description: "Guarde roteiros e experiências para futuras aventuras e encontros.",
+    description: "Aqui virão planos especiais, passeios e pequenas aventuras que quero preparar pra você.",
     path: "/roteiros",
     status: "coming-soon",
     icon: "✨",
