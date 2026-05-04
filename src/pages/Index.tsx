@@ -5,10 +5,10 @@ const Index = () => (
   <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,_rgba(251,207,232,0.35),_transparent_32%),radial-gradient(circle_at_bottom_right,_rgba(168,85,247,0.18),_transparent_28%),linear-gradient(180deg,#faf5ff_0%,#fffbeb_100%)] text-slate-900">
     <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
       <div className="mb-10 overflow-hidden rounded-[2rem] border border-slate-200 bg-white/90 p-8 shadow-soft backdrop-blur-sm">
-        <p className="text-sm font-semibold uppercase tracking-[0.28em] text-pink-500">Hub do Rafa &amp; da Gabi</p>
+        <p className="text-sm font-semibold uppercase tracking-[0.28em] text-pink-500">Hub do Rafa &amp; Gabi</p>
         <h1 className="mt-4 text-4xl font-bold tracking-tight text-slate-950 sm:text-5xl">Um cantinho nosso pra eu salvar o que crio pra você.</h1>
         <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600">
-          Esse site é só nosso. Aqui vou guardar as ideias, surpresas e pequenas coisas que eu fizer pra você — e sempre vou adicionar mais quando tiver algo novo.
+          Esse site é só nosso. Aqui vou guardar as ideias, surpresas e pequenas coisas que eu fizer pra você. Vou sempre colocar algo novo aqui quando tiver uma ideia legal.
         </p>
       </div>
 
@@ -18,7 +18,7 @@ const Index = () => (
             key={module.slug}
             className={`rounded-[1.75rem] border border-slate-200 bg-white/95 p-6 shadow-soft transition duration-200 ${
               module.status === "coming-soon"
-                ? "opacity-80 hover:shadow-lg"
+                ? "opacity-60 blur-sm hover:shadow-lg"
                 : "hover:-translate-y-1 hover:shadow-xl"
             }`}
           >
